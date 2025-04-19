@@ -1,0 +1,10 @@
+langchain
+faiss-cpu
+sentence-transformers
+transformers
+openai
+langchain_community
+google-search-results
+streamlit
+colabcode
+pyngrok
