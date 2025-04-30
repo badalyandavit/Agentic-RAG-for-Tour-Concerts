@@ -9,12 +9,19 @@ If the answer isn’t in your docs but looks like a band/artist query, it does a
 - **Contextual Q&A**: Answers strictly from ingested docs.  
 - **Live web fallback**: For artist/band queries, fetches upcoming tour info in real time.  
 - **Ngrok integration**: Exposes your local Streamlit server via a public URL.
+- **Retain History**: Keeps the JSON-like conversations for model training/finetuning.
 
 ## Requirements
-
 - **API keys**:
   - `OPENAI_API_KEY` – your OpenAI API key  
-  - `SERPAPI_API_KEY` – your SerpAPI key  
+  - `SERPAPI_API_KEY` – your SerpAPI key
+
+Due to hardware limitations (no access to own gpu, I had to host the model deployment via Google Colab notebooks.
+If you are hosting locally, you don't need access to Ngrok to have a public link for streamlit, however since we
+are working with Google notebook, there is no other alternative, other than having your own gpu.)
+Also, I didn't share my .env file, rather I have a placeholder, when you run the code you should be prompted
+to enter your API keys to keep it as an environment variable. If you want, you can add .env file, however this would 
+require some minor tinkering with my current code.
 - **Public URL** (choose one method):
   1. **Ngrok** (recommended for Colab/notebooks):  
      - `NGROK_API_KEY` – your ngrok authtoken  
@@ -27,8 +34,8 @@ If the answer isn’t in your docs but looks like a band/artist query, it does a
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd <repo-dir>
+git clone <https://github.com/badalyandavit/Agentic-RAG-for-Tour-Concerts>
+cd <Agentic-RAG-for-Tour-Concerts>
 ```
 
 ### 2. Install Dependencies
